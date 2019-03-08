@@ -1,0 +1,16 @@
+Use Cases:
+ - customer gets bank statement
+	- extend: create auditlog
+ - customer performs a transaction
+ 	- customer performs a withdrawal
+		- extend: create auditlog
+	- customer performs a deposit
+		- extend: create auditlog
+	- customer performs an electronic funds transfer
+		- extend: create auditlog
+		- extends: NFC
+		- extends: QRCode
+ - analyst reviews report
+	- extend: create auditlog
+	- frequency report
+	- location report
